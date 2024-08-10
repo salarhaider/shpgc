@@ -18,9 +18,14 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'username',
         'email',
         'password',
+        'status',
+
     ];
+
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -31,6 +36,8 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    public $timestamps = false;
 
     /**
      * Get the attributes that should be cast.
@@ -44,4 +51,6 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+
 }

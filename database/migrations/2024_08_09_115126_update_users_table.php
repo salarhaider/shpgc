@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            
+            $table->string('username')->unique('usernane_index');
+            $table->string('status', 1)->default('0');
         });
     }
 

@@ -50,6 +50,11 @@
                             <input type="text" name="name" class="form-control" placeholder="Enter Name">
                         </div>
                         <div class="form-group">
+                            <label>UserName</label>
+                            <input type="text" id="username" name="username" class="form-control" placeholder="Enter UserName">
+                            <span id="username-error" style="color: red;"></span>
+                        </div>
+                        <div class="form-group">
                             <label>Email address</label>
                             <input type="email" name="email" class="form-control" placeholder="Email">
                         </div>
