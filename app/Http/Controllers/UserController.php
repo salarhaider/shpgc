@@ -6,7 +6,7 @@ use App\Models\User;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -60,6 +60,12 @@ class UserController extends Controller
             return redirect()->route('login');
 
         }
+    }
+
+    public function ShowAllUsers(){
+
+        $users = DB::table('users')->get();
+        return view('users', ['data' => $users]);
     }
 
     public function logout()

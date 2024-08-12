@@ -50,6 +50,7 @@
                 <ul class="nav navbar-nav">
                     <li class="active">
                         <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                        <a href="{{route('show.users')}}"> <i class="menu-icon fa fa-users"></i>Users </a>
                     </li>
                     <h3 class="menu-title">UI elements</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
