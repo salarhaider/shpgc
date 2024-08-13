@@ -18,6 +18,7 @@ Route::controller(UserController::class)->group(function () {
         Route::get('/dashboard', 'dashboardPage')->name('dashboard');
         Route::get('/logout', 'logout')->name('logout');
         Route::get('/users', 'ShowAllUsers')->name('show.users');
+        Route::get('/user/{id}', 'singleUser')->name('show.singleUser');
     });
 
 });

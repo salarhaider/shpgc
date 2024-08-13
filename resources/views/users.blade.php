@@ -18,6 +18,7 @@
                         <td>{{$user->zipcode}}</td>
                         <td>{{$user->country}}</td>
                         <td>{{$user->status}}</td>
+                        <td><a href="{{route('show.singleUser', $user->id)}}" class="btn btn-sm btn-primary">view</a></td>
                     </tr>
                 @endforeach
                 </tbody>

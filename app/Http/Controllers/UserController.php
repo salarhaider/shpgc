@@ -68,6 +68,14 @@ class UserController extends Controller
         return view('users', ['data' => $users]);
     }
 
+    public function singleUser($id){
+
+        $user = DB::table('users')
+            ->where('id', '=', $id)
+            ->get();
+        return view('user', ['data' => $user]);
+    }
+
     public function logout()
     {
         Auth::logout();
