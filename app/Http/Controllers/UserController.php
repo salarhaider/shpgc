@@ -62,18 +62,36 @@ class UserController extends Controller
         }
     }
 
-    public function ShowAllUsers(){
+    public function ShowAllUsers()
+    {
 
         $users = DB::table('users')->get();
         return view('users', ['data' => $users]);
     }
 
-    public function singleUser($id){
+    public function singleUser($id)
+    {
 
         $user = DB::table('users')
             ->where('id', '=', $id)
             ->get();
         return view('user', ['data' => $user]);
+    }
+
+    public function deleteUser($id)
+    {
+
+        $user = DB::table('users')
+            ->where('id', '=', $id)
+            ->delete();
+
+        if ($user) {
+            $message = 'User Successfully Deleted';
+            return redirect()->route('show.users', ['message' => $message]);
+        } else {
+            $message = 'User Not Deleted';
+            return redirect()->route('show.users', ['message' => $message]);
+        }
     }
 
     public function logout()
